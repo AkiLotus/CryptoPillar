@@ -238,6 +238,7 @@
             // 
             // submitButton
             // 
+            this.submitButton.Enabled = false;
             this.submitButton.Location = new System.Drawing.Point(697, 536);
             this.submitButton.Name = "submitButton";
             this.submitButton.Size = new System.Drawing.Size(75, 23);
@@ -293,7 +294,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "MainForm";
-            this.Text = "CryptoPillar by Klaurenze";
+            this.Text = "CryptoPillar by Kaze";
             this.ResumeLayout(false);
             this.PerformLayout();
 
