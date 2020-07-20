@@ -80,6 +80,7 @@
             this.minBox.Size = new System.Drawing.Size(64, 20);
             this.minBox.TabIndex = 1;
             this.minBox.Text = "1";
+            this.minBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.minBox_KeyPress);
             // 
             // maxBox
             // 
@@ -88,6 +89,7 @@
             this.maxBox.Size = new System.Drawing.Size(68, 20);
             this.maxBox.TabIndex = 2;
             this.maxBox.Text = "102";
+            this.maxBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.maxBox_KeyPress);
             // 
             // speedLabel
             // 
@@ -104,7 +106,8 @@
             this.speedBox.Name = "speedBox";
             this.speedBox.Size = new System.Drawing.Size(100, 20);
             this.speedBox.TabIndex = 4;
-            this.speedBox.Text = "1";
+            this.speedBox.Text = "100";
+            this.speedBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.speedBox_KeyPress);
             // 
             // pillar1
             // 
@@ -245,6 +248,7 @@
             this.submitButton.TabIndex = 11;
             this.submitButton.Text = "Submit";
             this.submitButton.UseVisualStyleBackColor = true;
+            this.submitButton.Click += new System.EventHandler(this.submitButton_Click);
             // 
             // startButton
             // 
@@ -254,6 +258,7 @@
             this.startButton.TabIndex = 12;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = true;
+            this.startButton.Click += new System.EventHandler(this.startButton_Click);
             // 
             // timeBar
             // 
@@ -262,6 +267,10 @@
             this.timeBar.Size = new System.Drawing.Size(757, 23);
             this.timeBar.TabIndex = 13;
             this.timeBar.Value = 100;
+            // 
+            // gameTimer
+            // 
+            this.gameTimer.Tick += new System.EventHandler(this.gameTimer_Tick);
             // 
             // MainForm
             // 
