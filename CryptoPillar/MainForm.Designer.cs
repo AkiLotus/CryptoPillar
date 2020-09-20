@@ -167,6 +167,7 @@
             this.logBox.ReadOnly = true;
             this.logBox.Size = new System.Drawing.Size(318, 373);
             this.logBox.TabIndex = 6;
+            this.logBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button1
             // 

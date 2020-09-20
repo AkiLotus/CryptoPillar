@@ -29,6 +29,8 @@ namespace CryptoPillar
             pillars[2] = pillar3; buttons[2] = button3;
             pillars[3] = pillar4; buttons[3] = button4;
             pillars[4] = pillar5; buttons[4] = button5;
+
+            logBox.Text = "A = 2\nB = 3\nC = 5\nD = 7\nE = 11\nF = 13\nG = 17\nH = 19\nI = 23\nJ = 29\nK = 31\nL = 37\nM = 41\nN = 43\nO = 47\nP = 53\nQ = 59\nR = 61\nS = 67\nT = 71\nU = 73\nV = 79\nW = 83\nX = 89\nY = 97\nZ = 101".Replace("\n", "\r\n");
         }
 
         private void minBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -108,6 +110,8 @@ namespace CryptoPillar
             gameTimer.Start();
             submitButton.Enabled = true;
             startButton.Enabled = false;
+            minBox.Enabled = false;
+            maxBox.Enabled = false;
         }
 
         private void gameTimer_Tick(object sender, EventArgs e)
@@ -116,8 +120,8 @@ namespace CryptoPillar
             {
                 for (int i=0; i<pillars.Count(); i++)
                 {
-                    if (i == droplets[counter].PillarId) pillars[i].Text = droplets[counter].Value.ToString() + Environment.NewLine + pillars[i].Text;
-                    else pillars[i].Text = Environment.NewLine + Environment.NewLine + pillars[i].Text;
+                    if (i == droplets[counter].PillarId) pillars[i].Text = droplets[counter].Value.ToString() + Environment.NewLine + Environment.NewLine + pillars[i].Text;
+                    else pillars[i].Text = Environment.NewLine + Environment.NewLine + Environment.NewLine + pillars[i].Text;
                 }
             }
             counter++;
@@ -133,6 +137,8 @@ namespace CryptoPillar
 
             startButton.Enabled = true;
             submitButton.Enabled = false;
+            minBox.Enabled = true;
+            maxBox.Enabled = true;
         }
     }
 }
